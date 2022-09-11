@@ -21,8 +21,16 @@ class EventsController < ApplicationController
   def edit; end
 
   # POST /events or /events.json
-  
+  def create
+    @event = current_user.events.build(event_params)
 
+    if @event.save
+      redirect_to @event, notice: 'Event was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
   # PATCH/PUT /events/1 or /events/1.json
   def update
     respond_to do |format|
