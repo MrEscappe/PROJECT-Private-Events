@@ -3,7 +3,7 @@
 class TurboDeviseController < ApplicationController
   class Responder < ActionController::Responder
     def to_turbo_stream
-      controller.render(oprions.merge(formats: :html))
+      controller.render(options.merge(formats: :html))
     rescue ActionView::MissingTemplate => e
       if get?
         raise e

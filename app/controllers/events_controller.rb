@@ -30,7 +30,7 @@ class EventsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   # PATCH/PUT /events/1 or /events/1.json
   def update
     respond_to do |format|
