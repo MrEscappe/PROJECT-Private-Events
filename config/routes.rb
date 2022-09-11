@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     get 'users', to: 'devise/sessions#new'
   end
 
+  root to: 'events#index'
   devise_for :users
 end
