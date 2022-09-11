@@ -14,8 +14,8 @@ class EventsTest < ApplicationSystemTestCase
     visit events_url
     click_on "New event"
 
-    fill_in "Body", with: @event.body
     fill_in "Date", with: @event.date
+    fill_in "Description", with: @event.description
     fill_in "Location", with: @event.location
     fill_in "Title", with: @event.title
     click_on "Create Event"
@@ -28,8 +28,8 @@ class EventsTest < ApplicationSystemTestCase
     visit event_url(@event)
     click_on "Edit this event", match: :first
 
-    fill_in "Body", with: @event.body
     fill_in "Date", with: @event.date
+    fill_in "Description", with: @event.description
     fill_in "Location", with: @event.location
     fill_in "Title", with: @event.title
     click_on "Update Event"
