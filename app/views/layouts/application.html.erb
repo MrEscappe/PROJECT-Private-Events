@@ -11,14 +11,8 @@
   </head>
 
   <body>
-  <% if notice %>
-    <div class="alert alert-success" role="alert">
-      <%= notice %>
-  <%end%>
-  <% if alert %>
-    <div class="alert alert-danger" role="alert">
-      <%= alert %>
-  <%end%>
+  <%= render 'layouts/generic_layout/navbar'%>
+
     <%= yield %>
   </body>
 </html>
