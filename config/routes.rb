@@ -2,8 +2,11 @@
 
 Rails.application.routes.draw do
   resources :events
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_scope :user do
+    # redirect signing out users back to sign in page
+    get 'users', to: 'devise/sessions#new'
+  end
+
+  devise_for :users
 end
