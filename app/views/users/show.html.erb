@@ -1,0 +1,13 @@
+<main class="container">
+    <h1>Welcome <%= @user.name%></h1>
+    <p>Your events:</p>
+    <ul>
+    <% if @user.events.any? %>
+        <% @user.events.each do |event| %>
+            <li><%= link_to event.title, event %></li>
+        <% end %>
+    <% else %>
+        <p>You have no events yet.</p> 
+    <% end %>
+    </ul>
+</main>

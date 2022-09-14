@@ -1,9 +1,9 @@
 <main class="container">
     <div class="header">
     <%= link_to "Events", events_path, class:'btn btn--primary' %>
-    
-    
+    <%= link_to "New event", new_event_path %>
     <% if user_signed_in? %>
+        <%= link_to "Profile", user_path(current_user), class:'btn btn--primary' %>
         <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
     <% else %>
         <%= link_to "Login", new_user_session_path, class:'btn btn--primary' %>
