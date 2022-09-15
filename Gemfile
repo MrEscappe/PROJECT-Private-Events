@@ -78,5 +78,5 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+gem 'jsbundling-rails'  # needed for bootstrap javascript
+gem 'cssbundling-rails' # Install bootstrap 5
