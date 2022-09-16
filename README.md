@@ -1,24 +1,32 @@
-# README
+# Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Another project from The Odin Project
+Private Events is a website to users create events and attendee to this events.
+Building this project was a way to learn more about associations and how to use them, also how to use scopes and validations, and how to use the sessions to authenticate users.
 
-Things you may want to cover:
+Currently, the project is not finished, but I'm working on it, need to finish the UI, but the main functionalities are working.
 
-* Ruby version
+## How to use
 
-* System dependencies
+To use this project, you need to have Ruby, Rails and PostgreSQL installed on your machine, and then run the following commands:
 
-* Configuration
+```bash
+git clone git@github.com:MrEscappe/PROJECT-Private-events.git
+cd private-events
+bin/setup
+bin/dev
+```
 
-* Database creation
+After that, you can access the project on http://localhost:3000 and start using it.
 
-* Database initialization
+## Features
 
-* How to run the test suite
+- User registration and management using Devise gem
+- Users can create events, update, destroy and attend to other events
+- Users can see the events they are attending to and the events they created
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
 
-* Deployment instructions
-
-* ...
+Ruby on Rails
+Bootstrap
+Devise
