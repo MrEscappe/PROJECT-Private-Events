@@ -1,21 +1,11 @@
 <div id="<%= dom_id event %>">
-  <p>
-    <strong>Title:</strong>
-    <%= event.title %>
-  </p>
+  <div class="card-body">
+    <h5 class="card-title"><%= event.title%></h5>
+    <h5>Description:</h5>
+    <p class="card-text"><%= event.description%></p>
+    <h5>Location:</h5>
+    <p class="card-text"><%= event.location%></p>
+    <p class="card-text"><%= event.date%></p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= event.description %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= event.date %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= event.location %>
-  </p>
+  </div>
 </div>

@@ -2,12 +2,16 @@
 
 <h1>Events</h1>
 
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
+<div id="events" class='d-flex row row-cols-md-3  gap-2'>
+    <% @events.each do |event| %>
+  <div class="col">
+    <div class="card">
+      <%= render event %>
+      <p>
+        <%= link_to "Show this event", event, class: 'card-body card-link' %>
+      </p>
+    </div>
+  </div>
   <% end %>
 </div>
-
+<%= render "events/sidepanel" %>

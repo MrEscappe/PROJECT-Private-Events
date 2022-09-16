@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="card">
 <%= render @event %>
+</div>
 
 <div>
   <%= link_to "Back to events", events_path %> 
 
   <% if user_signed_in? && current_user.id == @event.creator_id %>
     <%= link_to "Edit this event", edit_event_path(@event) %>
-
-    <%= button_to "Destroy this event", @event, method: :delete %>     
+    <%= link_to "Destroy this event", @event, method: :delete, class: '' %>     
   <% end %>
 
   <% if (user_signed_in? && !@event.attendees.include?(current_user)) && !(current_user.id == @event.creator_id)%>
